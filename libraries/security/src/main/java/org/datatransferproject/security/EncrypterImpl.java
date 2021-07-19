@@ -57,6 +57,10 @@ final class EncrypterImpl implements Encrypter {
           cipher = Cipher.getInstance("AES/CBC/NoPadding");
           cipher.init(Cipher.ENCRYPT_MODE, key, generateIv(cipher));
           break;
+        case AES_CBC_PKCS5PADDING:
+          cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+          cipher.init(Cipher.ENCRYPT_MODE, key, generateIv(cipher));
+          break;
         case RSA_ECB_PKCS1:
           cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
           cipher.init(Cipher.ENCRYPT_MODE, key);

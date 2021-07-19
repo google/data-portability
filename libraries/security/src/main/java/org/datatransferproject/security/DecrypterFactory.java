@@ -38,7 +38,7 @@ public class DecrypterFactory {
    */
   public Decrypter create(SecretKey key) {
     Preconditions.checkArgument(key.getAlgorithm().equals("AES"));
-    return new DecrypterImpl(CryptoTransformation.AES_CBC_NOPADDING, key, monitor);
+    return new DecrypterImpl(CryptoTransformation.AES_CBC_PKCS5PADDING, key, monitor);
   }
 
   /**

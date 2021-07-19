@@ -19,6 +19,7 @@ package org.datatransferproject.security;
 in creation of Encrypter/Decrypter */
 public enum CryptoTransformation {
 	AES_CBC_NOPADDING,
-	RSA_ECB_PKCS1
+	RSA_ECB_PKCS1,
+	AES_CBC_PKCS5PADDING
 }
 
